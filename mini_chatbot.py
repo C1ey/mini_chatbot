@@ -5,11 +5,6 @@ import os
 import socket
 import time
 
-
-waiting = 2
-time.sleep(waiting)
-test = ["*" for i in range(3)]
-
 def chatbot():
     Password = "Password1"
     Greeting= input("Password: ")
@@ -18,7 +13,8 @@ def chatbot():
         exit()
     else:
         if Greeting == Password:
-            print(test)
+            print("Preparing Resources...")
+            time.sleep(3)
 
 #Define a dictionary of responses
             responses = {
@@ -33,13 +29,17 @@ def chatbot():
                 user_input = user_input.lower()
                 #Look for a response in the dictionary, use "default" if not found
                 return responses.get(user_input, responses["default"])
-                    #Main chat loop
-                print("Chatbot: Hello! Type 'goodbye' to exit.")
-                while True:
-                    user_input = input("You: ")
-                    if user_input.lower() !="goodbye":
-                        response = gnerate_response(user_input)
-                        print("Chatbot: ", response)
-                    else:
-                        print("Chatbot: Goodbye!")
-                        break
+            #Main chat loop
+            print("Chatbot: Hello! Type 'goodbye' to exit.")
+            while True:
+                user_input = input("You: ")
+                if user_input.lower() !="goodbye":
+                    response = generate_response(user_input)
+                    print("Chatbot: ", response)
+                else:
+                    print("Chatbot: Goodbye!")
+                break
+
+if __name__ == "__main__":
+    chat_bot=chatbot()
+    print (chat_bot)
