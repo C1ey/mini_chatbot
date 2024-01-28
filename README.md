@@ -7,7 +7,7 @@ This mini chatbot is designed to be easily understood and can be tailored to mee
 
 ## Features
 
-- [Has a password feature, has an elegant exit feature, allows for simplified implementation of learned data]
+- Has a password feature, has an elegant exit feature, allows for simplified implementation of learned data
 
 ## Prerequisites
 -Python 3.x installed
