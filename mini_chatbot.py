@@ -27,4 +27,10 @@ def chatbot():
                 "What are you able to assist me with":"I can help you with general knowledge inquiries", 
                 "goodbye":"Goodbye!"
             }
-            
+#Function to generate a response
+def generate_response(user_input):
+    #convert th euser input to lowercase for case-insensitive matching
+    user_input = user_input.lower()
+    #Look for a response in the dictionary, use "default" if not found
+    return responses.get(user.input, responses["default"])
+        #Main
