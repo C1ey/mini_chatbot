@@ -28,9 +28,18 @@ def chatbot():
                 "goodbye":"Goodbye!"
             }
 #Function to generate a response
-def generate_response(user_input):
-    #convert th euser input to lowercase for case-insensitive matching
-    user_input = user_input.lower()
-    #Look for a response in the dictionary, use "default" if not found
-    return responses.get(user.input, responses["default"])
-        #Main
+            def generate_response(user_input):
+                #convert th euser input to lowercase for case-insensitive matching
+                user_input = user_input.lower()
+                #Look for a response in the dictionary, use "default" if not found
+                return responses.get(user_input, responses["default"])
+                    #Main chat loop
+                print("Chatbot: Hello! Type 'goodbye' to exit.")
+                while True:
+                    user_input = input("You: ")
+                    if user_input.lower() !="goodbye":
+                        response = gnerate_response(user_input)
+                        print("Chatbot: ", response)
+                    else:
+                        print("Chatbot: Goodbye!")
+                        break
